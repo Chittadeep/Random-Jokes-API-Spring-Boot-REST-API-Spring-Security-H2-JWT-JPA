@@ -14,7 +14,7 @@ public class JokeController {
     @Autowired
     private JokeService jokeService;
 
-    @GetMapping("/")
+    @GetMapping("/getJoke")
     public ResponseEntity<String> getJoke() {
         return new ResponseEntity<String>(jokeService.generateRandomJoke(), HttpStatus.OK);
     }
